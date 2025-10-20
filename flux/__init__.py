@@ -226,7 +226,7 @@ class Process:
             return False
         
         dll_handle = self._get_mod_handle(dll_name)
-        print(f"DLL HANDLE: {dll_handle}")
+        #print(f"DLL HANDLE: {dll_handle}")
         if dll_handle == 0:
             return False
         
@@ -269,7 +269,7 @@ class Process:
                 break
             if not kernel32.Module32NextW(self._h_temporary, byref(modEntry)):
                 break
-        print(list_of_modules)
+        #print(list_of_modules)
         return result
     
     def find_pattern(self, pattern: bytes, mask: str = None) -> int:
